@@ -15,7 +15,7 @@ pipeline {
             steps{
                 script{
                    withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'dockerhubpwd')]) {
-                   sh 'docker login -u javatechie -p ${dockerhubpwd}'
+                   sh 'docker login -u d2messm -p ${dockerhubpwd}'
 
 }
                    sh 'docker push d2messm/devops-integration'
@@ -30,4 +30,4 @@ pipeline {
             }
         }
     }
-
+}
